@@ -1,7 +1,7 @@
 
 cmake_minimum_required(VERSION 3.5.1)
 
-project(mimicry-clock-screensaver LANGUAGES CXX VERSION 0.0.1)
+project(scroll-number-clock-screensaver LANGUAGES CXX VERSION 0.0.1)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_AUTOMOC ON)
@@ -18,7 +18,7 @@ set(QRC_SOURCES "")
 
 # 使用宏进行配置 config.h
 # 将项目名定义为资源结构路径 /usr/share/ + 项目名 + /assets/index.html
-set(APP_NAME "屏保拟态时钟")
+set(APP_NAME "屏保滚动数字时钟")
 configure_file(cmake/config.h.in config.h @ONLY)
 
 add_executable(${PROJECT_NAME} "main.cpp"
