@@ -22,8 +22,8 @@ function getClass(n, i) {
         return i - class_index === n || i + class_index === n;
     }) || '';
 }
-// 定时器，一秒执行一次
-setInterval(() => {
+
+function update() {
     // 获取时间
     let c = getClock();
     // 遍历所有.column
@@ -41,4 +41,10 @@ setInterval(() => {
             ele2.className='num '+getClass(n,i2);
         })
     })
+}
+// 定时器，一秒执行一次
+setInterval(() => {
+    update()
 }, 1000);
+
+update()
